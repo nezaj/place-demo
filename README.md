@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# r/Place Clone Built w/ InstantDB, NextJS, and Cursor
 
-## Getting Started
+This app was vibe-coded in < 5 min directly in Cursor using InstantDB for the
+backend. You can see the video below
 
-First, run the development server:
+[![Build a full-stack app in less than 5 minutes using Cursor and InstantDB](https://img.youtube.com/vi/euaK4WCK-ZM/maxresdefault.jpg)](https://www.youtube.com/watch?v=euaK4WCK-ZM)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+And play with it live at [place-demo.vercel.app](https://place-demo.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Core Functionality:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* 10x10 Grid: Exactly as requested, with 100 clickable pixels
+* 5 Color Palette: Red, Green, Blue, Yellow, and Magenta
+* Real-time Collaboration: Using Instant DB for live updates across multiple users/tabs
+* Click to Place: Simply click any pixel to place your selected color
 
-## Learn More
+**Technical Implementation:**
 
-To learn more about Next.js, take a look at the following resources:
+* Instant DB Integration: Created app with ID f6633367-849b-4e60-9a71-139ea84e37b8
+* Schema Design: Pixels stored with x/y coordinates, color, and timestamp
+* Real-time Updates: Changes appear instantly across all connected clients
+* Responsive UI: Clean, modern interface with hover effects
+* State Management: Smart pixel lookup and efficient updates
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**UI/UX Features:**
+* Dark theme with colorful accents
+* Color selector with visual feedback for selected color
+* Hover effects on grid squares and color buttons
+* Real-time stats showing total pixels placed
+* Coordinate tooltips when hovering over pixels
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 How to Use
+* Run the app: `npm run dev` and visit `localhost:3000`
+* Select a color from the 5-color palette at the top
+* Click any pixel in the 10x10 grid to place your color
+* See real-time updates by opening multiple tabs - changes appear instantly!
+* The app uses Instant DB for real-time synchronization, so multiple people can collaborate simultaneously just like the original Reddit r/place. Each pixel placement is stored with coordinates, color, and timestamp for perfect collaboration.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
